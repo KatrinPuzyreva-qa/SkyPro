@@ -1,0 +1,1127 @@
+{
+	"info": {
+		"_postman_id": "14ec51e7-99ad-4130-a1c3-5ede42d63ca5",
+		"name": "Курсовая работа №2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41952851"
+	},
+	"item": [
+		{
+			"name": "Позитивные проверки",
+			"item": [
+				{
+					"name": "Получение расписания",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"from\": \"2025-03-10T00:00:00+03:00\", \r\n \"till\": \"2025-04-10T00:00:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/events",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление события нажатием на + в будущем",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"\",\r\n  \"title\": \"посмотреть вебинар\",\r\n  \"startAt\": \"2025-03-15T01:00:00+03:00\",\r\n  \"endAt\": \"2025-03-15T01:30:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление события нажатием на пустой слот в будущем",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idReal\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#F4F5F6\",\r\n    \"color\": \"#81888D\",\r\n    \"description\": \"\",\r\n    \"title\": \"Фильм Дюна\",\r\n    \"startAt\": \"2025-03-17T13:00:00+06:00\",\r\n    \"endAt\": \"2025-03-17T14:30:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование времени события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idfake\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#F4F5F6\",\r\n    \"color\": \"#81888D\",\r\n    \"description\": \"\",\r\n    \"title\": \"Фильм Дюна\",\r\n    \"startAt\": \"2025-03-19T14:30:00+06:00\",\r\n    \"endAt\": \"2025-03-19T17:30:00+06:00\",\r\n    \"id\": {{idReal}},\r\n    \"oldStartAt\": \"2025-03-17T13:00:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/updatePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование цвета события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idsecond\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#FAC641\",\r\n    \"color\": \"#81888D\",\r\n    \"description\": \"\",\r\n    \"title\": \"Фильм Дюна\",\r\n    \"startAt\": \"2025-03-19T14:30:00+06:00\",\r\n    \"endAt\": \"2025-03-19T17:30:00+06:00\",\r\n    \"id\": {{idfake}},\r\n    \"oldStartAt\": \"2025-03-19T14:30:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/updatePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование даты события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idfirst\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#FAC641\",\r\n    \"color\": \"#81888D\",\r\n    \"description\": \"\",\r\n    \"title\": \"Фильм Дюна\",\r\n    \"startAt\": \"2025-03-20T14:30:00+06:00\",\r\n    \"endAt\": \"2025-03-20T17:30:00+06:00\",\r\n    \"id\": {{idsecond}},\r\n    \"oldStartAt\": \"2025-03-19T14:30:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/updatePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование описания события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var key = \"idpost\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#FAC641\",\r\n    \"color\": \"#81888D\",\r\n    \"description\": \"Посмотреть фильм\",\r\n    \"title\": \"Фильм Дюна\",\r\n    \"startAt\": \"2025-03-20T14:30:00+06:00\",\r\n    \"endAt\": \"2025-03-20T17:30:00+06:00\",\r\n    \"id\": {{idfirst}},\r\n    \"oldStartAt\": \"2025-03-20T14:30:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/updatePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование названия события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#FAC641\",\r\n    \"color\": \"#81888D\",\r\n    \"description\": \"Посмотреть фильм\",\r\n    \"title\": \"Фильм Дюна очень интересный\",\r\n    \"startAt\": \"2025-03-20T14:30:00+06:00\",\r\n    \"endAt\": \"2025-03-20T17:30:00+06:00\",\r\n    \"id\": {{idpost}},\r\n    \"oldStartAt\": \"2025-03-20T14:30:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/updatePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление события в будущем",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{id}},\r\n    \"startAt\": \"2025-03-15T01:00:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/removePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление события нажатием на + в прошлом",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idpast\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"\",\r\n  \"title\": \"посмотреть сериал\",\r\n  \"startAt\": \"2025-03-10T01:00:00+03:00\",\r\n  \"endAt\": \"2025-03-10T01:30:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление события в прошлом",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idpast\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{idpast}},\r\n    \"startAt\": \"2025-03-10T01:00:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/removePersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Негативные проверки",
+			"item": [
+				{
+					"name": "Создание события с названием длинною более  40 символов",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"\",\r\n  \"title\": \"посмотреть сериал или написать книгу символами более 40 или попить кока-колу\",\r\n  \"startAt\": \"2025-03-10T01:00:00+03:00\",\r\n  \"endAt\": \"2025-03-10T01:30:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создание события без даты и времени",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"\",\r\n  \"title\": \"посмотреть сериал\",\r\n  \"startAt\": \"\",\r\n  \"endAt\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создание события без названия",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"\",\r\n  \"title\": \"\",\r\n \"startAt\": \"2025-03-10T01:00:00+03:00\",\r\n  \"endAt\": \"2025-03-10T01:30:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создание события с более чем 500 символов в описании",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"В тихом парке, окружённом вековыми дубами, шептались листья. Солнечные лучи пробивались сквозь густую листву, создавая причудливые узоры на земле. Здесь, среди природы, время будто замедлялось, позволяя насладиться спокойствием и гармонией. Люди прогуливались по дорожкам, наслаждаясь свежим воздухом и красотой окружающего мира. Вдали слышались весёлые голоса детей, играющих на площадке. В тихом парке, окружённом вековыми дубами, шептались листья. Солнечные лучи пробивались сквозь густую листву, создавая причудливые узоры на земле. Здесь, среди природы, время будто замедлялось, позволяя насладиться спокойствием и гармонией. Люди прогуливались по дорожкам, наслаждаясь свежим воздухом и красотой окружающего мира. Вдали слышались весёлые голоса детей, играющих на площадке.\",\r\n  \"title\": \"Смотреть сериал\",\r\n \"startAt\": \"2025-03-10T01:00:00+03:00\",\r\n  \"endAt\": \"2025-03-10T01:30:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создание события с датой на 2 года вперед",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Cookie}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0ODk0MjUwLCJpZGVudGl0eSI6InRlc3QudHN0MzQ1QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5MTY1MDAyMjU1IiwibmFtZSI6Ilx1MDQxMFx1MDQzYlx1MDQzNVx1MDQzYVx1MDQ0MVx1MDQzNVx1MDQzOSIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDM0NUBza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ijg5amVLTFVwUUtURDBERnZtajM4R2ZOUkhJTjVBSFlsIiwiYnJhbmQiOm51bGwsImV4cCI6MTc0MTg4ODY3MywiYmlydGhkYXkiOiIyMDA2LTEwLTEwIiwiYUlzU3Ryb25nIjp0cnVlLCJhVHlwZSI6IlVTRVJOQU1FX1BBU1NXT1JEIiwiYVRpbWUiOjE3NDE3MTk0NzIsInJvbGVzIjpbIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEUiLCJST0xFX1RFQUNIRVJfQ0FORElEQVRFX0JBU0VfQUNDRVNTIiwiUk9MRV9UUk1fVVBMT0FEX0ZJTEUiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX1RFQUNIRVJTX0NBQklORVRfQkFTRV9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.tQ9MQ-zfEJ1s8Z8lz1uddQjSfAXe47pYLH7VswSFvs5ZSI3ke53FlJ-Awe-JvB9C9N5FTDU2FkVTS2aSn3W2ZMwfHL4kCUMMKwjEpeXDo3iyT_fxDtXb_kGVbHIV7r4wUeKyhRjokJG6Xe7wWjTvABpMSmiL3WIw40cDyncnQ1FdOadK-FC5JG7NJZEoqVxJl1QxsWGG1LRiBjzg21ION22cOxa8EsjGYcVdNe0Ydn0vB9mWndr_ZqNoAPmNQUayeOUGmHpgX8u9hKjOqLn4cY0Q7QaGzbZ3yGsV2VB-F3gkSlDRMsSR8Aerco1olrUesVI9cQSGJB4YqOiGZ-VSscVqrKFSfzVKTjt1EpxdRcVvBhkFM1n9chPdYXKp6ypxpvLKsdx7hfrazUqVl18DNBEa2lTch8xyIMne6NkVaJPa4ynAUbn993MAqAbZAxsL_LGMi3G8ZqcLi6SuegSyb0arWzxzx9wQao1xqw8i_Aa7b-QZJIs21j3gqwytn40flwVgVVOE-xi6q05C0Ze57fkAgFKLgRuM3xpHKZXFVXeeXNoUewKWosMC2bL4V5TQATsxqH2mYRVyMkKhwiRvADDofwD4fYYmz6eeORusRz_Nqybwlhp0Uh5SEU74YU0KrjpqAOPPeQNjlACxdZKfQp67c0Ize9cwWcLd0Dm01jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"backgroundColor\": \"#F4F5F6\",\r\n  \"color\": \"#81888D\",\r\n  \"description\": \"В тихом парке, окружённом вековыми дубами, шептались листья.\",\r\n  \"title\": \"В лесу\",\r\n \"startAt\": \"2027-03-10T01:00:00+03:00\",\r\n  \"endAt\": \"2027-03-10T01:30:00+03:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/v2/schedule/createPersonal",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{Cookie}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Cookie",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "URL",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": ""
+		},
+		{
+			"key": "idReal",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idfake",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idsecond",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idfirst",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idpost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idpast",
+			"value": ""
+		}
+	]
+}
